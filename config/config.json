@@ -1,0 +1,25 @@
+{
+  "workspace": "./workspace",
+  "gpus": ["1, 2, 3, 4, 5, 6, 7, 8, 9"],
+  "random_seed": 42,
+  "data": {
+    "raw_dir": "./workspace/raw",
+    "processed_dir": "./workspace/processed",
+    "features_file": "features.parquet",
+    "graph_dir": "./workspace/graph"
+  },
+  "yfinance": {
+    "period": "5y",
+    "interval": "1d",
+    "threads": true
+  },
+  "model": {
+    "lookback": 30,
+    "hidden_dim": 64,
+    "num_layers": 2,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "batch_size": 128,
+    "epochs": 50
+  }
+}
